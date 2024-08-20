@@ -2,6 +2,19 @@
 
 This project is a minimal RESTful Web API built using .NET 8.0. It was designed for managing user profiles, handling authentication, and managing a player's (user's) inventory.
 
+## Specification
+Use cases covered:
+- Adding a single item to a user's inventory
+- Adding multiple items to a user's inventory
+- Fetching a user's inventory
+- Subtracting from a user's inventory
+  
+Where the following is also true:
+- A user can have 0 of an item
+- A user must only be able to edit their own inventory
+- A user's inventory must recognize that new item types could be added later on
+- A user's inventory must survive if the service goes down
+
 ## Overview
 - **JWT Authentication**: Secure access to API endpoints using JSON Web Tokens
 - **User Management**: Endpoints for creating, retrieving, and managing user profiles
