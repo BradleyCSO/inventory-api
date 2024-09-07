@@ -62,3 +62,6 @@ If you prefer to use Docker, you can start the application and its dependencies 
 
 ## Configuring PostgreSQL (if not using Docker Compose)
 To setup this project without Docker, the only dependency for this project is [PostgreSQL](https://www.postgresql.org/download/), from there a localhost server can be setup, where the <code>appsettings.json</code> Postgres connection string can be updated to point to this.
+
+# Next steps?
+The focus of this project was creating a well-documented Inventory API that a game client might use. It also implemented JWT authentication, which turned out to be tightly coupled to the API itself, and 'bloated' the docs. This could be exposed as part of its own API and consumed by any other API, agnostic of language. It would also build on the microservice concepts illustrated here, in that changes made to the game client will not break the authentication API, thus making it easier to test, extend -- more loosely coupled, produce less bugs, overall allowing the focus to be on making a highly resilient inventory management system for a game client. 
